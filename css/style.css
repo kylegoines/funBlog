@@ -93,6 +93,12 @@ h1 {
   @media (max-width: 648px) {
     h1 {
       font-size: 60px; } }
+  @media (max-width: 413px) {
+    h1 {
+      font-size: 40px;
+      padding-top: 80px;
+      padding-bottom: 10px;
+      text-align: center; } }
 
 h2 {
   color: #4c877c;
@@ -104,7 +110,7 @@ h2 {
   text-shadow: 0px 1px 0px #82e1cf; }
   @media (max-width: 383px) {
     h2 {
-      padding: 0 0 0 20px; } }
+      padding: 0 0 0 40px; } }
 
 h3 {
   color: #4c877c;
@@ -123,6 +129,9 @@ small {
   font-family: Verdana, sans-serif;
   color: #848788;
   padding-bottom: 20px; }
+  @media (max-width: 413px) {
+    small {
+      text-align: center; } }
 
 p {
   margin-top: 20px;
@@ -135,6 +144,9 @@ p {
 header {
   background-color: #ecf0f1;
   padding: 0 0 0 100px; }
+  @media (max-width: 413px) {
+    header {
+      padding: 0 0 0 0; } }
 
 small {
   display: block; }
@@ -145,8 +157,8 @@ small {
   height: 60px;
   width: 50px;
   left: 20px;
-  top: 20px;
-  background-color: red; }
+  top: 10px;
+  background: url(../img/openButton2.png); }
   @media (max-width: 1024px) {
     .openButton {
       display: block; } }
@@ -163,7 +175,9 @@ small {
       margin-top: 20px; } }
   @media (max-width: 413px) {
     .content {
-      margin-left: 20px; } }
+      margin: 0 auto;
+      width: 93%;
+      padding: 20px 0 0 0; } }
 
 .divider {
   height: 8px;

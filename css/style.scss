@@ -144,6 +144,12 @@ h1 {
   @include breakpoint(mama-bear) { 
     font-size: 60px;
   };
+  @include breakpoint(baby-bear) {
+    font-size: 40px;
+    padding-top: 80px;
+    padding-bottom: 10px;
+    text-align: center;
+  };
 }
 
 h2{
@@ -155,7 +161,7 @@ h2{
   padding: 0 0 0 40px;;
   text-shadow: 0px 1px 0px #82e1cf;
   @include breakpoint(baby-bearNav) {
-    padding: 0 0 0 20px;
+    padding: 0 0 0 40px;
   }
 
 }
@@ -179,6 +185,9 @@ small{
   font-family: Verdana, sans-serif;
   color: #848788;
   padding-bottom: 20px;
+  @include breakpoint(baby-bear) {
+    text-align: center;
+  }
 }
 
 p{
@@ -199,7 +208,11 @@ header
 
 header{
   background-color: #ecf0f1;
-  padding: 0 0 0 100px;;
+  padding: 0 0 0 100px;
+
+  @include breakpoint(baby-bear){
+    padding: 0 0 0 0;
+  }
 }
 small{
   display: block;
@@ -211,8 +224,8 @@ small{
   height: 60px;
   width: 50px;
   left: 20px;
-  top: 20px;
-  background-color: red;
+  top: 10px;
+  background: url(../img/openButton2.png);
 
   @include breakpoint(papa-bear) {
     display: block;
@@ -244,7 +257,9 @@ body content
   }
 
   @include breakpoint(baby-bear) {
-    margin-left: 20px;
+    margin: 0 auto;
+    width: 93%;
+    padding: 20px 0 0 0;
   }
 
 }
