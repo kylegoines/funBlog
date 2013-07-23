@@ -209,6 +209,11 @@ header
 header{
   background-color: #ecf0f1;
   padding: 0 0 0 100px;
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 
   @include breakpoint(baby-bear){
     padding: 0 0 0 0;
