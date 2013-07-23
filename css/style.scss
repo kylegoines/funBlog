@@ -1,0 +1,388 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+
+/*
+
+/////////////////////////////////////////////////////////////////////
+vars mixins includes stuff like that
+
+*/
+
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (max-width: 1024px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (max-width: 648px) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 413px) { @content; }
+  }
+  @else if $point == baby-bearNav {
+    @media (max-width: 383px) { @content; }
+  }
+
+}
+
+
+/*
+
+/////////////////////////////////////////////////////////////////////
+gloabls + helper classes
+
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+html,body{
+  height: 100%;
+
+}
+
+.wrapper{
+  position: relative;
+  max-width: 1900px;
+    ///overflow-y: hidden;
+
+
+}
+
+.subWrapper{
+  position: relative;
+  margin-left: 300px;
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  @include breakpoint(papa-bear) { 
+    margin-left: 0px;
+    
+  }
+}
+
+.pushOpen{
+  left: 0px !important;
+}
+
+.pushForward{
+  left: 300px !important;
+  @include breakpoint(baby-bearNav) {
+    left: 250px !important;
+  }
+}
+
+
+/*
+
+/////////////////////////////////////////////////////////////////////
+typography
+
+*/
+
+
+@font-face {
+  font-family: 'nexa_lightregular';
+  src: url("../Nexa_Free_Light-webfont.eot");
+  src: url("../Nexa_Free_Light-webfont.eot?#iefix") format("embedded-opentype"), url("../Nexa_Free_Light-webfont.woff") format("woff"), url("../Nexa_Free_Light-webfont.ttf") format("truetype"), url("../Nexa_Free_Light-webfont.svg#nexa_lightregular") format("svg");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+h1 {
+  font-family: 'nexa_lightregular';
+  color: #34495e;
+  font-size: 90px;
+  padding-top: 30px;
+
+  @include breakpoint(mama-bear) { 
+    font-size: 60px;
+  };
+}
+
+h2{
+  color: #4c877c;
+  font-size: 28px;
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 0 0 40px;;
+  text-shadow: 0px 1px 0px #82e1cf;
+  @include breakpoint(baby-bearNav) {
+    padding: 0 0 0 20px;
+  }
+
+}
+
+h3{
+  color: #4c877c;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 0 0 40px;
+  padding-top: 50px;
+  text-shadow: 0px 1px 0px #82e1cf;
+  @include breakpoint(baby-bearNav) {
+    padding: 50px 0 0 18px;
+  }
+
+}
+
+small{
+  font-family: Verdana, sans-serif;
+  color: #848788;
+  padding-bottom: 20px;
+}
+
+p{
+  margin-top: 20px;
+  font-family: Verdana, sans-serif;
+  font-size: 21px;
+  line-height: 27px;
+  font-weight: normal;
+  color: #3b3b3b;
+}
+
+/*
+
+/////////////////////////////////////////////////////////////////////
+header
+
+*/
+
+header{
+  background-color: #ecf0f1;
+  padding: 0 0 0 100px;;
+}
+small{
+  display: block;
+}
+
+.openButton{
+  display: none;
+  position: absolute;
+  height: 60px;
+  width: 50px;
+  left: 20px;
+  top: 20px;
+  background-color: red;
+
+  @include breakpoint(papa-bear) {
+    display: block;
+
+  }
+
+}
+
+
+
+
+/*
+
+/////////////////////////////////////////////////////////////////////
+body content
+
+*/
+
+.content{
+  margin-top: 40px;
+  margin-left: 100px;
+  padding: 0 40px 0 0;
+  max-width: 1007px;
+
+  @include breakpoint(mama-bear) { 
+    margin-left: 30px;
+    padding: 0 30px 0 0;
+    margin-top: 20px;
+  }
+
+  @include breakpoint(baby-bear) {
+    margin-left: 20px;
+  }
+
+}
+
+.divider{
+  height: 8px;
+  width: 8px;
+  background-color: #ecf0f1;
+  margin: 40px auto;
+  border-radius: 100px;
+
+  @include breakpoint(baby-bear) {
+    margin: 20px auto;
+  }
+
+}
+
+.callout{
+  width: 100%;
+  border-left: 13px solid #4c877c;
+  @include breakpoint(baby-bear) {
+    border-left: none;
+    border-top: 5px solid #4c877c;
+  }
+
+  p{
+    font-size: 27px;
+    line-height: 29px;
+    color: #34495e;
+    display: block;
+    padding: 0 0 0 30px;
+  @include breakpoint(baby-bear) {
+      font-size: 18px;
+      line-height: 23px;
+      padding: 0 0 0 0;
+      margin-top: 10px;
+    }
+  }
+}
+
+
+/*
+
+/////////////////////////////////////////////////////////////////////
+sidebar
+
+*/
+
+.sidebar{
+  
+  border-left: 8px solid #4c877c;
+  width: 300px;
+  height: 100%;
+  background-color: #70c1b2;
+  float: left;
+  position: relative;
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+
+  .sidebarContent{
+
+    width: 250px;
+  }
+
+  @include breakpoint(papa-bear) {
+    position: absolute;
+    left: -300px;
+  }
+
+
+  @include breakpoint(baby-bearNav) {
+    width: 250px;
+  }
+
+    h2{
+      padding-top: 30px;
+    }
+    ul li a{
+
+      display: block;
+      color: #fff;
+      font-family: 'nexa_lightregular';
+      width: 220px;
+      padding: 15px 0 0 58px;
+      line-height: 20px;
+      font-size: 18px;
+      text-decoration: none;
+      @include breakpoint(baby-bearNav) {
+        padding: 0 0 0 38px;
+      }
+
+    }
+
+    p{
+      display: block;
+      margin-top: 5px;;
+      color: #fff;
+      font-family: 'nexa_lightregular';
+      width: 270px;
+      padding: 5px 0 0 58px;
+      line-height: 20px;
+      font-size: 18px;
+      @include breakpoint(baby-bearNav) {
+        padding: 5px 0 0 20px;
+        width: 240px;
+      }
+    }
+
+    ul li{
+      padding-top: 10px;
+    }
+
+    ul li:hover:before{
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      display: block;
+      background-color: #fff;
+      left: 45px;
+      margin-top: 5px;
+    }
+
+
+}
+
+
+
+/*
+.subWrapper{
+  margin-left: 100px;
+}
+
+.sidebar{
+  display: none;
+}
+
+*/

@@ -12,19 +12,126 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <!--<link rel="stylesheet" href="css/normalize.css">-->
+        <link rel="stylesheet" href="css/style.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+            <div class="sidebar">
+                <div class="sidebarContent">
+                    <h2>Hi I'm Kyle</h2>
+                    <p>
+                        i'm a freelance front end 
+                        designer and developer living
+                        in boston ma. 
+                    </p>
+                    <h3>Development</h3>
+                    <ul>
+                        <li><a href="">Its about time. Backbone.</a></li>
+                        <li><a href="">A Handel on Handelbars.</a></li>
+                        <li><a href="">Tryin to get flexy</a></li>
+                    </ul>
+                    <h3>Design</h3>
+                    <ul>
+                        <li><a href="">ready for design</a></li>
+                        <li><a href="">get ready for design</a></li>
+                        <li><a href="">empathy</a></li>
+                    </ul>
+                </div><!--sidebarcontent-->
+            </div><!--sidebar-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
 
-        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+
+            <div class="subWrapper">
+                <header>
+                    <div class="openButton">line thing</div>
+                    <h1>It's about time. backbone.</h1>
+                    <small>a pain in my...eah.. back.</small>
+                </header>
+
+                <div class="content">
+                    <div class="callout">
+                        <p> backbone, i hear it everyday, MVC, MVVM, the heart of new age javascript applications, controlers, views and whatever else is in between. A libairy that leverages underscore and handelbars to build clean readiable applications. give me a break. its about time to learn. backbone.</p>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <p>This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.elit mauris eas quam, ut aliquam massa nislSuspendisse in orci enim.Suspendisse in orci enim.This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.elit mauris eas quam, ut aliquam massa nislSuspendisse in orci enim.Suspendisse in orci enim.</p>
+                    <p>This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quisuspendisse in orci enim.Suspendisse in orci!</p>
+
+                    <p>This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.elit mauris eas quam, ut aliquam massa nislSuspendisse in orci enim.Suspendisse in orci enim.This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.elit mauris eas quam, ut aliquam massa nislSuspendisse in orci enim.Suspendisse in orci enim.</p>
+                    <p>This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quisuspendisse in orci enim.Suspendisse in orci!</p>
+
+
+                </div>
+
+                <div class="divider"></div>
+            </div><!--subwrap-->
+
+
+
+
+<!--    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script type="text/javascript">
+        /*var keep = $('.wrapper').height()
+        $(".sidebar").height(keep+100);
+        $(window).resize(function(){
+            var keep = $('.wrapper').height()
+            $(".sidebar").height(keep);
+        });
+*/
+        </script>
+
+        <script type="text/javascript">
+            var keep = $(document).height();
+
+            var num = 100;
+            $('.sidebar').height(keep+num)
+
+            $(window).resize(function(){
+
+                var newHeight = $('.subWrapper').height();
+                var docWidth = $('.subWrapper').innerWidth();
+                $('.sidebar').height(0);
+                
+                $('.sidebar').height(newHeight+num+num);
+
+                //console.log('this is height '+newHeight)
+
+                //console.log(docWidth+"this is it nromals")
+                if(docWidth > 1010){
+                    //console.log(docWidth+ 'reached');
+                    $('.subWrapper').removeClass('pushForward')
+                    $('.sidebar').removeClass('pushOpen')
+                }
+
+
+
+            })
+
+
+            function push(){
+                $('.sidebar').toggleClass('pushOpen');
+                $('.subWrapper').toggleClass('pushForward')
+            }
+
+            $('.openButton').on('click',push);
+
+            /*                if(docWidth > 1024){
+                    //alert('mppp')
+                    $('.sidebar').removeClass('pushOpen');
+                    $('.subWrapper').removeClass('pushForward')
+                }
+
+                */
+
+
+        </script>
+
+
 
     </body>
 </html>
