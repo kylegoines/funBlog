@@ -14,6 +14,7 @@
 
         <!--<link rel="stylesheet" href="css/normalize.css">-->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/prism.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -59,6 +60,31 @@
                     <p>This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.elit mauris eas quam, ut aliquam massa nislSuspendisse in orci enim.Suspendisse in orci enim.This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.elit mauris eas quam, ut aliquam massa nislSuspendisse in orci enim.Suspendisse in orci enim.</p>
                     <p>This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quisuspendisse in orci enim.Suspendisse in orci!</p>
 
+                    <pre>
+                        <code class="language-javascript">
+      names = name ? [name] : _.keys(this._events);
+      for (i = 0, l = names.length; i < l; i++) {
+        name = names[i];
+        if (events = this._events[name]) {
+          this._events[name] = retain = [];
+          if (callback || context) {
+            for (j = 0, k = events.length; j < k; j++) {
+              ev = events[j];
+              if ((callback && callback !== ev.callback && callback !== ev.callback._callback) ||
+                  (context && context !== ev.context)) {
+                retain.push(ev);
+              }
+            }
+          }
+          if (!retain.length) delete this._events[name];
+        }
+      }
+
+      return this;
+    },
+                        </code>
+                    </pre>
+
                     <p>This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.elit mauris eas quam, ut aliquam massa nislSuspendisse in orci enim.Suspendisse in orci enim.This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.elit mauris eas quam, ut aliquam massa nislSuspendisse in orci enim.Suspendisse in orci enim.</p>
                     <p>This is Photoshop's ve, velit mauris egestas quam, ut aliquam massa nisl quisuspendisse in orci enim.Suspendisse in orci!</p>
 
@@ -75,14 +101,9 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/prism.js"></script>
         <script type="text/javascript">
-        /*var keep = $('.wrapper').height()
-        $(".sidebar").height(keep+100);
-        $(window).resize(function(){
-            var keep = $('.wrapper').height()
-            $(".sidebar").height(keep);
-        });
-*/
+
         </script>
 
         <script type="text/javascript">
