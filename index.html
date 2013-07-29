@@ -20,6 +20,9 @@
     <body>
             <div class="sidebar">
                 <div class="sidebarContent">
+                    <div class="close">
+
+                    </div>
                     <h2>Hi I'm Kyle</h2>
                     <p>
                         i'm a freelance front end 
@@ -110,7 +113,10 @@
             var keep = $(document).height();
 
             var num = 100;
-            $('.sidebar').height(keep+num)
+
+
+
+            $('.sidebar').height(keep+num);
 
             $(window).resize(function(){
 
@@ -140,6 +146,8 @@
             }
 
             $('.openButton').on('click',push);
+
+            $('.close').on('click',push);
 
             /*                if(docWidth > 1024){
                     //alert('mppp')

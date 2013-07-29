@@ -343,6 +343,24 @@ sidebar
     width: 250px;
   }
 
+    .close{
+      position: relative;
+      left: 20px;
+      top: 10px;
+      float: right;
+      display: none;
+      height: 20px;
+      width: 20px;
+      background: url(../img/close2.png);
+      @include breakpoint(papa-bear) {
+        display: block;
+      }
+      @include breakpoint(baby-bearNav) {
+        float: left;
+        left:   13px;
+      }
+    }
+
     h2{
       padding-top: 30px;
     }
@@ -389,7 +407,12 @@ sidebar
       display: block;
       background-color: #fff;
       left: 45px;
-      margin-top: 5px;
+      margin-top: 20px;
+
+      @include breakpoint(baby-bearNav) {
+        margin-top: 5px;
+        margin-left: -20px;
+      }
     }
 
 
